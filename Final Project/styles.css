@@ -1,0 +1,190 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 100px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.search input {
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+.welcome {
+    background: url('desktop-mockup.png') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.welcome-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.connect-button {
+    padding: 10px 20px;
+    background-color: #f0ad4e;
+    border: none;
+    border-radius: 5px;
+    color: #333;
+    cursor: pointer;
+}
+
+.connect-button:hover {
+    background-color: #ec971f;
+}
+
+.about-us, .services, .vision, .team, .contact-us {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.service-item {
+    display: inline-block;
+    width: 30%;
+    margin: 20px;
+}
+
+.service-item img {
+    width: 100%;
+    height: auto;
+}
+
+.service-item button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.service-item button:hover {
+    background-color: #555;
+}
+
+.vision-container {
+    position: relative;
+    display: inline-block;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.vision-container img {
+    width: 100%;
+    height: auto;
+    opacity: 0.5;
+}
+
+.vision-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.vision-content p {
+    background: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.vision-content button {
+    padding: 10px 20px;
+    background-color: #f0ad4e;
+    border: none;
+    border-radius: 5px;
+    color: #333;
+    cursor: pointer;
+}
+
+.vision-content button:hover {
+    background-color: #ec971f;
+}
+
+.team-member {
+    display: inline-block;
+    width: 45%;
+    margin: 20px;
+}
+
+.team-member img {
+    width: 100%;
+    height: auto;
+}
+
+.contact-us form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.contact-us form label {
+    margin-top: 10px;
+}
+
+.contact-us form input, .contact-us form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-us form button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.location, .hours {
+    margin-top: 30px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
