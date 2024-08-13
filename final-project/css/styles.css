@@ -1,20 +1,32 @@
-body {
-    font-family: Arial, sans-serif;
+/* CSS Reset */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-header {
-    background-color: #333;
-    color: #fff;
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #fff;
+    color: #222;
+    line-height: 1.6;
+}
+
+.header-container, 
+.welcome-container,
+.service-grid,
+.team-grid,
+.vision-container,
+.contact-us form {
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 20px;
 }
 
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+header {
+    background-color: #222;
+    color: #fff;
+    padding: 20px;
 }
 
 .logo img {
@@ -25,10 +37,6 @@ nav ul {
     list-style-type: none;
     display: flex;
     gap: 20px;
-}
-
-nav ul li {
-    display: inline;
 }
 
 nav ul li a {
@@ -44,38 +52,39 @@ nav ul li a {
 
 .welcome {
     background: url('desktop-mockup.png') no-repeat center center/cover;
-    color: #fff;
+    color: #222;
     text-align: center;
     padding: 100px 0;
 }
 
-.welcome-container {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
 .connect-button {
     padding: 10px 20px;
-    background-color: #f0ad4e;
+    background-color: #c78c06;
     border: none;
     border-radius: 5px;
-    color: #333;
+    color: #fff;
     cursor: pointer;
 }
 
 .connect-button:hover {
-    background-color: #ec971f;
+    background-color: #c;
+    color: #222;
 }
 
-.about-us, .services, .vision, .team, .contact-us {
+.about-us {
+    background-color: #ffe6ac;
     padding: 50px 20px;
     text-align: center;
 }
 
-.service-item {
-    display: inline-block;
-    width: 30%;
-    margin: 20px;
+.services h2 {
+    margin-bottom: 20px;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
 }
 
 .service-item img {
@@ -85,7 +94,7 @@ nav ul li a {
 
 .service-item button {
     padding: 10px 20px;
-    background-color: #333;
+    background-color: #222;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -98,9 +107,8 @@ nav ul li a {
 
 .vision-container {
     position: relative;
-    display: inline-block;
-    width: 50%;
-    margin: 0 auto;
+    text-align: center;
+    margin: 20px auto;
 }
 
 .vision-container img {
@@ -114,10 +122,6 @@ nav ul li a {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    text-align: center;
-}
-
-.vision-content p {
     background: rgba(255, 255, 255, 0.7);
     padding: 20px;
     border-radius: 10px;
@@ -125,21 +129,27 @@ nav ul li a {
 
 .vision-content button {
     padding: 10px 20px;
-    background-color: #f0ad4e;
+    background-color: #c78c06;
     border: none;
     border-radius: 5px;
-    color: #333;
+    color: #fff;
     cursor: pointer;
 }
 
 .vision-content button:hover {
-    background-color: #ec971f;
+    background-color: #ffe6ac;
+    color: #222;
+}
+
+.team-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
 }
 
 .team-member {
-    display: inline-block;
-    width: 45%;
-    margin: 20px;
+    width: 100%;
 }
 
 .team-member img {
@@ -147,17 +157,20 @@ nav ul li a {
     height: auto;
 }
 
+.contact-us {
+    background-color: #ffe6ac;
+    padding: 50px 20px;
+    text-align: center;
+}
+
 .contact-us form {
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: left;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
 }
 
-.contact-us form label {
-    margin-top: 10px;
-}
-
-.contact-us form input, .contact-us form textarea {
+.contact-us form input,
+.contact-us form textarea {
     width: 100%;
     padding: 10px;
     margin-top: 5px;
@@ -167,7 +180,7 @@ nav ul li a {
 
 .contact-us form button {
     padding: 10px 20px;
-    background-color: #333;
+    background-color: #222;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -175,16 +188,31 @@ nav ul li a {
     margin-top: 10px;
 }
 
-.location, .hours {
-    margin-top: 30px;
-}
-
 footer {
-    background-color: #333;
+    background-color: #222;
     color: #fff;
     text-align: center;
     padding: 20px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+}
+
+@media (min-width: 760px) {
+    .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .service-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .team-grid {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .team-member {
+        width: 48%;
+    }
 }
